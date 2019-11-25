@@ -32,7 +32,7 @@
     border: 1px solid var(--color-grey);
     background-color: var(--color-white);
     margin-right: 1rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 2px;
@@ -64,8 +64,15 @@
   &__agreement {
     grid-column: 1 / -1;
     font-size: 1.2rem;
-    display: flex;
+    // display: flex;
     align-items: center;
+  }
+
+  &__modal {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem;
+    text-align: center;
   }
 }
 

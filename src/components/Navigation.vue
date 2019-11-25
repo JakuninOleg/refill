@@ -1,6 +1,6 @@
 <template>
   <nav class="nav">
-    <a href="https://zdeslegko.ru">
+    <a href="https://zdeslegko.ru" aria-label="Логотип Здесь Легко">
       <Logo />
     </a>
     <Button class="btn btn--yellow justify-right align-center">

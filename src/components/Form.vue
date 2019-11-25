@@ -4,25 +4,27 @@
     <InputPhone />
     <slot name="form-btn" />
     <div class="form__agreement">
-      <input v-model="checked" type="checkbox" class="form__checkbox">
+      <input v-model="checked" type="checkbox" class="form__checkbox" />
       <span class="tick" />
-      <span
-        class="grey-dark checkbox-span"
-      >Нажимая кнопку, вы даете свое согласие на обработку и хранение своих&nbsp;</span>
       <span>
-        <a
-          class="hyperlink"
-          href="https://zdeslegko.ru/static/documents/politics.pdf"
-          target="blank"
-        >персональных данных.</a>
+        <span
+          class="grey-dark checkbox-span"
+        >Нажимая кнопку, вы даете свое согласие на обработку и хранение своих&nbsp;</span>
+        <span>
+          <a
+            class="hyperlink"
+            href="https://zdeslegko.ru/static/documents/politics.pdf"
+            target="blank"
+          >персональных данных.</a>
+        </span>
       </span>
     </div>
   </form>
 </template>
 
 <script>
-import Button from '~/components/Button.vue'
-import InputPhone from '~/components/InputPhone.vue'
+import Button from "~/components/Button.vue";
+import InputPhone from "~/components/InputPhone.vue";
 
 export default {
   components: {
@@ -32,7 +34,7 @@ export default {
   data: () => {
     return {
       checked: true
-    }
+    };
   }
-}
+};
 </script>
