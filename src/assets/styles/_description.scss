@@ -1,0 +1,49 @@
+.description {
+  position: relative;
+  overflow: hidden;
+
+  &__header {
+    grid-column: 1 / 11;
+  }
+
+  &__body {
+    grid-column: 1 / -1;
+    position: relative;
+  }
+
+  &__list {
+    list-style: none;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__list-item {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+
+
+    &--bold {
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__list-span {
+    margin-left: 2rem;
+  }
+
+  &__image {
+    width: 80rem;
+    position: absolute;
+    right: -15%;
+    bottom: 0;
+    z-index: 0;
+
+    @include respond(big-desktop) {
+      right: 0;
+    }
+  }
+}

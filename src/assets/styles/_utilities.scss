@@ -1,0 +1,48 @@
+.justify-right {
+  justify-self: right;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.block {
+  display: block;
+}
+
+.hashtags {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.hashtag {
+  margin-right: 2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--color-grey-dark);
+  border: 1px solid #D6D6D6;
+  border-radius: 1.5rem;
+  padding: .1rem 2rem;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 60rem;
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: var(--color-yellow);
+    color: var(--color-grey-dark);
+    font-size: 2.7rem;
+    transform: translateX(-50%);
+    padding: .3rem 5rem;
+    border-radius: 0px 0px 15px 15px;
+  }
+}
+
+.no-padding {
+  padding: 0;
+}

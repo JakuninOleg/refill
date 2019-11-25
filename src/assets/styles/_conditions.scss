@@ -1,0 +1,51 @@
+.conditions {
+  position: relative;
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(3, 27.5rem);
+    grid-gap: 3rem;
+    justify-items: center;
+    padding-top: 5rem;
+    position: relative;
+    z-index: 1;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 35rem);
+    }
+  }
+
+  &__icons-item {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__icon-box {
+    border-radius: 50%;
+    background-color: var(--color-grey-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__text {
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  &__image {
+    position: absolute;
+    right: -8%;
+    bottom: 0;
+    width: 40rem;
+
+    @include respond(big-desktop) {
+      right: 0;
+    }
+  }
+}
