@@ -1,24 +1,17 @@
 <template>
-  <form class="form">
-    <slot name="form-name" />
-    <InputPhone />
-    <slot name="form-btn" />
-    <div class="form__agreement">
-      <input v-model="checked" type="checkbox" class="form__checkbox" />
-      <span class="tick" />
-      <span>
-        <span
-          class="grey-dark checkbox-span"
-        >Нажимая кнопку, вы даете свое согласие на обработку и хранение своих&nbsp;</span>
-        <span>
-          <a
-            class="hyperlink"
-            href="https://zdeslegko.ru/static/documents/politics.pdf"
-            target="blank"
-          >персональных данных.</a>
-        </span>
-      </span>
-    </div>
+  <form class="form" @submit.prevent="submit">
+    <template v-if="!submitted">
+      <slot name="form-header" />
+      <slot name="form-name" />
+      <InputPhone />
+      <slot name="form-btn" />
+      <slot name="agreement" />
+    </template>
+    <template v-else>
+      <slot name='form-confirmed'/>
+      <slot name='form-submitted-message'/>
+      <slot name='form-submitted-btn'/>
+    </template>
   </form>
 </template>
 
@@ -35,6 +28,16 @@ export default {
     return {
       checked: true
     };
+  },
+  computed: {
+    submitted() {
+      return this.$store.getters.submitted;
+    }
+  },
+  methods: {
+    submit() {
+      this.$store.dispatch("submitForm");
+    }
   }
 };
 </script>

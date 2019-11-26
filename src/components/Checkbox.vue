@@ -1,0 +1,27 @@
+<template>
+  <div class="form__agreement">
+    <input v-model="checked" type="checkbox" class="form__checkbox" />
+    <span>
+      <span
+        class="grey-dark checkbox-span"
+      >Нажимая кнопку, вы даете свое согласие на обработку и хранение своих&nbsp;</span>
+      <span>
+        <a
+          class="hyperlink"
+          href="https://zdeslegko.ru/static/documents/politics.pdf"
+          target="blank"
+        >персональных данных.</a>
+      </span>
+    </span>
+  </div>
+</template>
+
+<script>
+export default {
+  data: () => {
+    return {
+      checked: true
+    };
+  }
+};
+</script>

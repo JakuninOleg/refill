@@ -1,6 +1,6 @@
 @mixin respond($breakpoint) {
   @if $breakpoint == small-phone {
-    @media only screen and (max-width: 26em) {
+    @media only screen and (max-width: 23.5em) {
       //350px
       @content;
     }
@@ -21,7 +21,7 @@
   }
 
   @if $breakpoint == tab-port {
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 63.125em) {
       //1000px
       @content;
     }
@@ -78,6 +78,10 @@ html {
 
   @include respond(tab-port) {
     font-size: 45%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
   }
 }
 

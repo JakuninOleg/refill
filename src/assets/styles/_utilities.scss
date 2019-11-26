@@ -8,21 +8,32 @@
 
 .block {
   display: block;
+
+  @include respond(medium) {
+    display: inline;
+  }
 }
 
 .hashtags {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2rem;
+
+  @include respond(phone) {
+    font-size: 2.2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 .hashtag {
-  margin-right: 2rem;
   font-size: 1.7rem;
   font-weight: 600;
   color: var(--color-grey-dark);
   border: 1px solid #D6D6D6;
   border-radius: 1.5rem;
   padding: .1rem 2rem;
+  margin: 0 1rem 1.5rem 0;
 }
 
 .map {
@@ -38,16 +49,29 @@
     color: var(--color-grey-dark);
     font-size: 2.7rem;
     transform: translateX(-50%);
-    padding: .3rem 5rem;
+    padding: .3rem 2rem;
     border-radius: 0px 0px 15px 15px;
+
+    @include respond(medium) {
+      font-size: 2.2rem;
+      text-align: center;
+    }
   }
 }
 
 .no-padding {
   padding: 0;
+
+  @include respond(medium) {
+    padding: 1.5rem;
+  }
 }
 
 .overflow-hidden {
   overflow: hidden;
   position: relative;
+}
+
+.text-center {
+  text-align: center;
 }

@@ -10,4 +10,28 @@
   align-items: center;
   grid-gap: 3rem;
   padding: 1rem 1.5rem 0 3.5rem;
+
+  &__phone {
+    @include respond(medium) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    @include respond(medium) {
+      display: none;
+    }
+  }
+
+  &__btn-svg {
+    display: none;
+
+    @include respond(medium) {
+      display: block;
+    }
+
+    @include respond(small-phone) {
+      zoom: 0.7;
+    }
+  }
 }

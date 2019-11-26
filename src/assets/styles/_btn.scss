@@ -27,8 +27,28 @@
     background-color: var(--color-red);
     padding: 1.5rem 10rem;
 
+    @include respond(medium) {
+      padding: 1.5rem 7rem;
+    }
+
+    @include respond(phone) {
+      padding: 1.5rem 10rem;
+    }
+
     &:hover {
       background-color: var(--color-red-dark);
+    }
+  }
+
+  &--modal {
+    height: 5.5rem;
+  }
+
+  &--phone {
+    padding: 1rem 5rem;
+
+    @include respond(phone) {
+      padding: 1rem 3rem;
     }
   }
 }

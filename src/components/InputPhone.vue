@@ -67,8 +67,9 @@ export default {
       } else {
         this.phone = '+7 (' + phoneStr.substring(1, 4)
       }
+
+      this.$store.dispatch('setPhone', this.phone.replace(/\D/g, ''))
     }
   }
 }
 </script>
-798260554

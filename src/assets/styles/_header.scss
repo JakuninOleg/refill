@@ -1,7 +1,6 @@
 .header {
   background-image: url("~@/assets/images/bg.jpeg");
   background-size: cover;
-  height: 55rem;
   margin-bottom: 3rem;
 
   &__inner {
@@ -22,14 +21,30 @@
     grid-column: 4 / 10;
     font-size: 2rem;
 
+    @include respond(medium) {
+      grid-column: 6 / -1;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+
     &--date {
       grid-column: 1 / 4;
       background-color: #4c8bb3;
       border-radius: 2rem;
-      padding: 0.5rem;
+      padding: 0.8rem;
       color: var(--color-white);
       text-align: center;
       font-size: 2rem;
+
+      @include respond(medium) {
+        grid-column: 1 / 6;
+      }
+
+      @include respond(phone) {
+        grid-column: 1 / -1;
+      }
     }
 
     &--pts {
@@ -43,39 +58,70 @@
     line-height: 5.2rem;
     font-weight: 800;
 
+    @include respond(medium) {
+      grid-column: 3 / 11;
+      font-size: 4.3rem;
+      text-align: center;
+    }
+
     &--secondary {
       grid-column: 1 / 7;
       font-size: 3.6rem;
       line-height: 4.9rem;
       font-weight: 700;
+
+      @include respond(tab-port) {
+        line-height: 4.3rem;
+        font-size: 3.2rem;
+      }
+
+      @include respond(medium) {
+        grid-column: 1 / 9;
+      }
+
+      @include respond(phone) {
+        grid-column: 1 / -1;
+        text-align: center;
+      }
     }
   }
 
   &__btn {
     grid-column: 1 / 5;
     justify-self: left;
+    transform: translateY(2rem);
 
-    @include respond(big-desktop) {
-      transform: translateY(2rem);
+    @include respond(medium) {
+      grid-column: 9 / -1;
+      transform: none;
     }
 
-    @include respond(tab-port) {
-      transform: translateY(-4rem);
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      justify-self: center;
     }
   }
 
   &__image {
     width: 60rem;
     position: absolute;
-    bottom: -1.4rem;
+    bottom: -4rem;
     right: 0;
 
     @include respond(big-desktop) {
-      transform: translateY(2rem);
+      transform: translateY(2.5rem);
     }
 
-    @include respond(tab-port) {
-      transform: translateY(-3.8rem);
+    @include respond(medium) {
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+
+  &__image-container {
+    @include respond(medium) {
+      display: flex;
+
     }
   }
 }

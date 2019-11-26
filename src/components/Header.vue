@@ -9,15 +9,17 @@
           Здесь заправляют бесплатно!
         </h1>
         <h2 class="header__heading--secondary">
-          <span>дарим</span>
-          <span class="block">до 100 литров бензина</span>
+          <span>дарим&nbsp;</span>
+          <span class="block">до 100 литров бензина&nbsp;</span>
           <span class="header__text--pts">+ деньги под птс</span>
         </h2>
         <Button @click.native="scrollToForm" class="btn header__btn btn--red">
           Получить
         </Button>
       </div>
-      <g-image src="~/assets/images/gauge.png" alt="Спидометр" class="header__image" />
+      <div class="header__image-container">
+        <g-image src="~/assets/images/gauge.png" alt="Спидометр" class="header__image" />
+      </div>
     </div>
   </header>
 </template>

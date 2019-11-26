@@ -5,9 +5,54 @@ import DefaultLayout from "~/layouts/Default.vue";
 
 import "~/assets/styles/main.scss";
 
-export default function(Vue, { router, head, isClient }) {
+import Vuex from 'vuex'
+
+export default function(Vue, { router, head, appOptions }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
+
+  Vue.use(Vuex)
+
+  appOptions.store = new Vuex.Store({
+    state:{
+      phone: '',
+      name: '',
+      submitted: false
+    },
+    mutations: {
+      'SET_PHONE'(state, payload) {
+        state.phone = payload;
+      },
+      'SET_NAME'(state, payload) {
+        state.phone = payload;
+      },
+      'SUBMIT_FORM'(state) {
+        state.submitted = true
+      }
+    },
+    actions: {
+      setPhone({commit}, payload) {
+        commit('SET_PHONE', payload)
+      },
+      setName({commit}, payload) {
+        commit('SET_NAME', payload)
+      },
+      submitForm({commit}) {
+        commit('SUBMIT_FORM')
+      }
+    },
+    getters: {
+      phone(state) {
+        return state.phone
+      },
+      name(state) {
+        return state.name  
+      },
+      submitted(state) {
+        return state.submitted
+      }
+    }
+  })
 
   head.link.push({
     rel: "stylesheet",

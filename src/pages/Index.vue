@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <Modal v-if="modalOpen" />
+    <Modal v-if="modalOpen" @toggleModal="toggleModal"/>
 
     <Header>
-      <Navigation />
+      <Navigation @toggleModal="toggleModal"/>
     </Header>
 
     <Description />
@@ -61,12 +61,12 @@ export default {
           "3A6d943a65558c35905c86a4cf36cb2c62c1897927b66ad5a15ada713aad7c1ec6",
         lang: "ru_RU"
       },
-      modalOpen: true
+      modalOpen: false
     }
   },
-  meethods: {
+  methods: {
     toggleModal() {
-      this.Open = !this.Open
+      this.modalOpen = !this.modalOpen
     }
   }
 };

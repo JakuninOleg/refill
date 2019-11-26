@@ -4,12 +4,27 @@
   gap: 2rem;
   margin-top: 4rem;
 
+
+  @include respond(medium) {
+    grid-template-columns: 1fr;
+  }
+
+  &--flex {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+  }
+
+
   &__input {
     background: var(--color-white);
     border: 1px solid #d3d3d3;
     border-radius: 1rem;
     padding: 1.5rem 2.5rem;
     font-size: 1.6rem;
+
+    @include respond(medium) {
+      font-size: 2rem;
+    }
 
     &::placeholder {
       font-size: 1.4rem;
@@ -50,10 +65,10 @@
       border: none;
 
       &:after {
-        content: '';
+        content: "";
         display: block;
-        width: .5rem;
-        height: .9rem;
+        width: 0.5rem;
+        height: 0.9rem;
         border: solid #000;
         border-width: 0 1.5px 1.5px 0;
         transform: rotate(45deg);
@@ -64,15 +79,52 @@
   &__agreement {
     grid-column: 1 / -1;
     font-size: 1.2rem;
-    // display: flex;
+    display: flex;
     align-items: center;
+
+    &--modal {
+      display: inline;
+    }
   }
 
   &__modal {
+    margin: 0;
     grid-template-columns: 1fr;
     gap: 3rem;
-    padding: 3rem;
+    padding-top: 2rem;
     text-align: center;
   }
-}
 
+  &__submitted-message {
+    margin-bottom: 4rem;
+  }
+
+  &__submitted-icon {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #6FCF97;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 3rem;
+
+    &--left {
+      justify-self: left;
+      width: 6rem;
+      height: 6rem;
+      margin: 0;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 1.4rem;
+      height: 3rem;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

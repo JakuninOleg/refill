@@ -13,8 +13,34 @@
 
   &__content {
     background: var(--color-white);
-    padding: 2rem 5rem;
-    width: 50rem;
+    width: 48rem;
+    height: 50rem;
     border-radius: 1.2rem;
+  }
+
+  &__header {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    background-color: var(--color-yellow);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1.2rem 1.2rem 0 0;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: var(--color-grey-dark);
+    position: relative;
+  }
+
+  &__body {
+    padding: 2rem 5rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: .1rem;
+    right: 1rem;
+    text-transform: lowercase;
+    cursor: pointer;
+    font-size: 2rem;
   }
 }
