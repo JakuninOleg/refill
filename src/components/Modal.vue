@@ -32,7 +32,7 @@
 
           <template v-slot:form-submitted-message>
             <h4
-              class="form__submitted-message heading-4 text-center"
+              class="form__submitted-message heading-4 heading-4--modal text-center"
             >Спасибо за обращение! Менеджеры свяжутся с Вами в течение 5 минут</h4>
           </template>
 

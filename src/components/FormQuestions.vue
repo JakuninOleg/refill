@@ -14,7 +14,7 @@
           <Button class="btn btn--red no-padding">Заказать звонок</Button>
         </template>
         <template v-slot:agreement>
-          <label class="label"><Checkbox />Подтверждение</label>
+          <Checkbox />
         </template>
         <template v-slot:form-confirmed>
           <div class="form__submitted-icon form__submitted-icon--left"></div>

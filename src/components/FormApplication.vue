@@ -16,7 +16,7 @@
             class="form-application__step-text"
           >Отправьте заявку и получите предварительное одобрение по телефону</span>
         </div>
-        <Form :class="{'form--flex': submitted}"> 
+        <Form :class="{'form--flex': submitted}">
           <template v-slot:form-name>
             <label class="label"><input type="text" class="form__name form__input" placeholder="Ваше имя" />Имя</label>
           </template>
@@ -24,7 +24,7 @@
             <Button class="btn btn--red form-application__button">Отправить заявку</Button>
           </template>
           <template v-slot:agreement>
-            <label class="label"><Checkbox />Подтверждение</label>
+            <Checkbox class="label__agreement--application" />
           </template>
           <template v-slot:form-confirmed>
             <div class="form__submitted-icon form__submitted-icon--left"></div>

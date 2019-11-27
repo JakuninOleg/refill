@@ -41,6 +41,10 @@
   @include respond(medium) {
     padding: 0 1.5rem;
   }
+
+  &--modal {
+     padding: 0 3rem;
+  }
 }
 
 .hyperlink {

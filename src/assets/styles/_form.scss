@@ -3,16 +3,6 @@
   gap: 2rem;
   margin-top: 2rem;
 
-  // &--questions {
-  //   @include respond(medium) {
-  //     grid-template-columns: 2fr 1fr;
-  //   }
-
-  //   @include respond(tab-port) {
-  //     grid-template-columns: 2fr 1fr;
-  //   }
-  // }
-
   @include respond(medium) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -22,9 +12,17 @@
     grid-template-columns: 3fr 2fr 2fr;
   }
 
+  &--questions {
+    @include respond(medium) {
+      grid-template-columns: 37rem 25rem 1fr;
+    }
+  }
+
+
   &--flex {
     display: grid;
     grid-template-columns: 4rem 1fr;
+    grid-template-rows: 1fr;
   }
 
   &__input {
@@ -95,6 +93,7 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
+    grid-column: 1 / -1;
 
     @include respond(medium) {
       grid-column: 1 / 2;
@@ -116,6 +115,7 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
+    grid-template-rows: auto;
   }
 
   &__submitted-message {

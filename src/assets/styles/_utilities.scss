@@ -86,4 +86,18 @@
 
 .label {
   color: white;
+
+  &__agreement {
+    grid-column: 1 / -1;
+
+    &--application {
+
+      @include respond(tab-port) {
+        grid-column: 1 / -1;
+      }
+
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+  }
 }
