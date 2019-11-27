@@ -1,9 +1,24 @@
 .btn {
-  padding: 1rem 3rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  width: 5rem;
+  height: 3rem;
   border: none;
   font-family: "Open sans";
   font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(phone) {
+    width: 9rem;
+    height: 4rem;
+    border-radius: 1rem;
+  }
+
+  @include respond(tab-port) {
+    width: 29rem;
+    height: 4rem;
+  }
 
   &:hover {
     cursor: pointer;
@@ -25,14 +40,14 @@
   &--red {
     color: var(--color-white);
     background-color: var(--color-red);
-    padding: 1.5rem 10rem;
+    width: auto;
+    height: 5rem;
+    border-radius: 1rem;
 
     @include respond(medium) {
-      padding: 1.5rem 7rem;
     }
 
     @include respond(phone) {
-      padding: 1.5rem 10rem;
     }
 
     &:hover {
@@ -42,13 +57,11 @@
 
   &--modal {
     height: 5.5rem;
+    justify-self: center;
   }
 
   &--phone {
-    padding: 1rem 5rem;
-
     @include respond(phone) {
-      padding: 1rem 3rem;
     }
   }
 }

@@ -16,7 +16,6 @@
 
     <section class="map">
       <div id="map" class="map"></div>
-   
       <div class="map__header">Адреса офисов в Москве</div>
     </section>
 
@@ -99,9 +98,37 @@ export default {
     init_map() {
       this.myMap = new ymaps.Map("map", {
         center: [55.714404, 37.719136], // Москва.
-        zoom: 17,
+        zoom: 10,
         controls: []
       });
+
+      let avilon = new ymaps.GeoObject({
+        geometry: {
+          type: "Point",
+          coordinates: [55.713988, 37.71866]
+        },
+        // Свойства.
+        properties: {
+          // Контент метки.
+          iconCaption: "Финсервис 'Здесь Легко'",
+          balloonContent: 'Россия, Москва, Волгоградский проспект, 43к3'
+        }
+      });
+
+      let wayPark = new ymaps.GeoObject({
+        geometry: {
+          type: "Point",
+          coordinates: [55.857579, 37.394242]
+        },
+        // Свойства.
+        properties: {
+          iconCaption: "Финсервис 'Здесь Легко'",
+          balloonContent: 'Россия, Москва, МКАД; 71-й километр, с16А'
+        }
+      });
+
+
+      this.myMap.geoObjects.add(avilon).add(wayPark)
     },
     toggleModal() {
       this.modalOpen = !this.modalOpen;
@@ -109,9 +136,3 @@ export default {
   }
 };
 </script>
-
-  methods: {
-    sendRequest() {
-      axios.post('http://localhost:3000/api/v1/requests/', {request: {name: 'test', phone: '12345', source: 'zaim-pts'}})
-    }
-  }

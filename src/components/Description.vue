@@ -1,9 +1,9 @@
 <template>
   <section class="section description">
-    <div class="section__content grid">
+    <div class="section__content">
       <header class="description__header">
         <h3 class="heading-3">
-          Пользуйтесь автомобилем бесплатно и заправляйтесь на АЗС Лукойл
+          Пользуйтесь автомобилем и бесплатно заправляйтесь на АЗС Лукойл
         </h3>
         <div class="hashtags">
           <span class="hashtag">#бензинподарок</span>
@@ -14,35 +14,35 @@
       <article class="description__body">
         <ul class="description__list">
           <li class="description__list-item">
-            <span><BulletYellow /></span>
+            <BulletYellow />
             <span class="description__list-span">от 100 000 рублей наличными или на карту</span>
           </li>
           <li class="description__list-item">
-            <span><BulletYellow /></span>
+            <BulletYellow />
             <span class="description__list-span">без подтверждения дохода</span>
           </li>
           <li class="description__list-item">
-            <span><BulletYellow /></span>
+            <BulletYellow />
             <span class="description__list-span">получение денег в день обращения</span>
           </li>
           <li class="description__list-item">
-            <span><BulletYellow /></span>
+            <BulletYellow />
             <span class="description__list-span">высокий процент одобрения</span>
           </li>
           <li class="description__list-item">
-            <span><BulletYellow /></span> 
+            <BulletYellow /> 
             <span class="description__list-span">с любой кредитной историей</span>
           </li>
         </ul>
         <ul class="description__list">
           <li class="description__list-item description__list-item--bold">
-            <span><BulletRed /></span>
+            <BulletRed />
             <span
               class="description__list-span"
-            >Оплачивайте топливо, а также другие товары на любой АЗС Лукойл</span>
+            >Подарочная карта Лукойл – оплачивайте топливо, а также другие товары на любой АЗС Лукойл</span>
           </li>
           <li class="description__list-item description__list-item--bold">
-            <span><BulletRed /></span>
+            <BulletRed />
             <span class="description__list-span">Гарантия и надежность. Входим в реестр ЦБ РФ</span>
           </li>
         </ul>

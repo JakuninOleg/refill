@@ -1,12 +1,30 @@
 .section {
+  position: relative;
+  
+  &__content {
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 10;
 
+    @include respond(phone) {
+      width: 54rem;
+      padding: 3rem 3rem;
+    }
+
+    @include respond(medium) {
+      width: 72rem;
+    }
+
+    @include respond(tab-port) {
+      width: 96rem;
+    }
+
+    @include respond(tab-land) {
+      min-width: 117rem;
+    }
+  }
   &__grey {
     background: var(--color-white-dark);
-  }
-
-  &__content {
-    padding: 5rem;
-    max-width: 114rem;
-    margin: 0 auto;
   }
 }

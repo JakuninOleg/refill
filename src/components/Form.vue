@@ -3,14 +3,16 @@
     <template v-if="!submitted">
       <slot name="form-header" />
       <slot name="form-name" />
-      <InputPhone />
+      <label class="label">
+        <InputPhone />Телефон
+      </label>
       <slot name="form-btn" />
       <slot name="agreement" />
     </template>
     <template v-else>
-      <slot name='form-confirmed'/>
-      <slot name='form-submitted-message'/>
-      <slot name='form-submitted-btn'/>
+      <slot name="form-confirmed" />
+      <slot name="form-submitted-message" />
+      <slot name="form-submitted-btn" />
     </template>
   </form>
 </template>
@@ -37,6 +39,7 @@ export default {
   methods: {
     submit() {
       this.$store.dispatch("submitForm");
+      axios.post('http://localhost:3000/api/v1/requests/', {request: {name: 'test', phone: '12345', source: 'zaim-pts'}})
     }
   }
 };

@@ -1,37 +1,54 @@
 .nav {
-  height: 100px;
+  height: 75px;
   background: var(--color-white);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0px 0px 15px 15px;
   display: grid;
-  grid-template-columns: 1fr 3fr max-content;
-  grid-template-rows: min-content;
+  grid-template-columns: 1fr max-content;
   align-content: center;
   align-items: center;
   grid-gap: 3rem;
-  padding: 1rem 1.5rem 0 3.5rem;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    height: 10rem;
+    padding: 1rem 3rem;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 3fr max-content;
+  }
+
+  &__logo {
+    zoom: 0.7;
+    
+    @include respond(phone) {
+      zoom: normal;
+    }
+  }
 
   &__phone {
-    @include respond(medium) {
-      display: none;
+    display: none;
+
+    @include respond(tab-port) {
+      display: inline-block;
     }
   }
 
   &__btn {
-    @include respond(medium) {
-      display: none;
+    display: none;
+
+    @include respond(tab-port) {
+      display: inline-flex;
     }
   }
 
   &__btn-svg {
-    display: none;
+    zoom: 0.8;
 
-    @include respond(medium) {
-      display: block;
-    }
-
-    @include respond(small-phone) {
-      zoom: 0.7;
+    @include respond(tab-port) {
+      display: none;
     }
   }
 }

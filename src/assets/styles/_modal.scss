@@ -13,9 +13,13 @@
 
   &__content {
     background: var(--color-white);
-    width: 48rem;
-    height: 50rem;
+    width: 95%;
     border-radius: 1.2rem;
+
+    @include respond(phone) {
+      width: 80%;
+      max-width: 50rem;
+    }
   }
 
   &__header {
@@ -32,7 +36,11 @@
   }
 
   &__body {
-    padding: 2rem 5rem;
+    padding: 3rem 1.5rem;
+
+    @include respond(phone) {
+      padding: 3rem 3rem;
+    }
   }
 
   &__close {

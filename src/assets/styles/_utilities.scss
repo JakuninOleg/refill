@@ -27,13 +27,26 @@
 }
 
 .hashtag {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--color-grey-dark);
-  border: 1px solid #D6D6D6;
+  border: 1px solid #d6d6d6;
   border-radius: 1.5rem;
-  padding: .1rem 2rem;
+  padding: 0.1rem 0.7rem;
   margin: 0 1rem 1.5rem 0;
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+    padding: 0.1rem 2rem;
+  }
+
+  @include respond(medium) {
+    font-size: 1.7rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 0.1rem 2.5rem;
+  }
 }
 
 .map {
@@ -47,23 +60,18 @@
     left: 50%;
     background-color: var(--color-yellow);
     color: var(--color-grey-dark);
-    font-size: 2.7rem;
+    font-size: 1.6rem;
+    width: 80%;
+    max-width: 57rem;
+    text-align: center;
     transform: translateX(-50%);
-    padding: .3rem 2rem;
+    padding: 0.3rem 3rem;
     border-radius: 0px 0px 15px 15px;
 
     @include respond(medium) {
-      font-size: 2.2rem;
+      font-size: 2.7rem;
       text-align: center;
     }
-  }
-}
-
-.no-padding {
-  padding: 0;
-
-  @include respond(medium) {
-    padding: 1.5rem;
   }
 }
 
@@ -74,4 +82,8 @@
 
 .text-center {
   text-align: center;
+}
+
+.label {
+  color: white;
 }

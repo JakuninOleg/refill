@@ -1,22 +1,22 @@
 .conditions {
-  position: relative;
   overflow: hidden;
 
   &__icons {
     display: grid;
-    grid-template-columns: repeat(3, 27.5rem);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
-    justify-items: center;
     padding-top: 5rem;
-    position: relative;
-    z-index: 1;
-
-    @include respond(tab-land) {
-      grid-template-columns: repeat(2, 35rem);
-    }
 
     @include respond(medium) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 28rem);
+    }
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(3, 26rem);
     }
   }
 
@@ -38,23 +38,42 @@
   }
 
   &__text {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     text-align: center;
-    font-size: 1.7rem;
-  }
+    font-size: 1.4rem;
 
-  &__image {
-    position: absolute;
-    right: -8%;
-    bottom: 0;
-    width: 40rem;
-
-    @include respond(big-desktop) {
-      right: 0;
+    @include respond(phone) {
+      font-size: 1.7rem;
     }
 
     @include respond(medium) {
-      display: none;
+      padding: 2rem 4rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include respond(medium) {
+      display: block;
+      margin: 0 auto;
+      width: 48rem;
+    }
+
+    @include respond(tab-port) {
+      position: absolute;
+      right: -22rem;
+      bottom: 0;
+      width: 60rem;
+    }
+
+    @include respond(tab-land) {
+      right: -20rem;
+      bottom: -5rem;
     }
   }
 }

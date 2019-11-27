@@ -19,10 +19,23 @@
   }
 
   &__list-item {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: min-content 1fr;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(medium) {
+      font-size: 1.7rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.7rem;
+    }
 
     &--bold {
       font-weight: 600;
@@ -31,26 +44,30 @@
   }
 
   &__list-span {
-    margin-left: 2rem;
+    @include respond(medium) {
+      padding-right: 15rem;
+    }
   }
 
   &__image {
-    width: 80rem;
-    position: absolute;
-    right: -15%;
-    bottom: 0;
-    z-index: 0;
-
-    @include respond(big-desktop) {
-      right: 0;
-    }
+    display: none;
 
     @include respond(medium) {
-      right: -35%;
+      width: 62rem;
+      position: absolute;
+      right: -15%;
+      bottom: 0;
+      z-index: 0;
+      display: block;
     }
 
-    @include respond(phone) {
-      display: none;
+    @include respond(tab-port) {
+      width: 80rem;
+    }
+
+    @include respond(tab-land) {
+      width: 80rem;
+      right: 0;
     }
   }
 }

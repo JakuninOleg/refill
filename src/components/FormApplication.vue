@@ -18,13 +18,13 @@
         </div>
         <Form :class="{'form--flex': submitted}"> 
           <template v-slot:form-name>
-            <input type="text" class="form__name form__input" placeholder="Ваше имя" />
+            <label class="label"><input type="text" class="form__name form__input" placeholder="Ваше имя" />Имя</label>
           </template>
           <template v-slot:form-btn>
-            <Button class="btn btn--red no-padding">Отправить заявку</Button>
+            <Button class="btn btn--red form-application__button">Отправить заявку</Button>
           </template>
           <template v-slot:agreement>
-            <Checkbox />
+            <label class="label"><Checkbox />Подтверждение</label>
           </template>
           <template v-slot:form-confirmed>
             <div class="form__submitted-icon form__submitted-icon--left"></div>

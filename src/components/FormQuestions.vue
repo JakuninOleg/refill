@@ -9,12 +9,12 @@
           <span class="hashtag">#качество</span>
         </div>
       </header>
-      <Form :class="{'form--flex': submitted}">
+      <Form :class="{'form--flex': submitted}" class="form--questions">
         <template v-slot:form-btn>
           <Button class="btn btn--red no-padding">Заказать звонок</Button>
         </template>
         <template v-slot:agreement>
-          <Checkbox />
+          <label class="label"><Checkbox />Подтверждение</label>
         </template>
         <template v-slot:form-confirmed>
           <div class="form__submitted-icon form__submitted-icon--left"></div>

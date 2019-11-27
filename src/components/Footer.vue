@@ -1,6 +1,6 @@
 <template>
   <footer class="section__grey">
-    <div class="section__content">
+    <div class="section__content footer">
       <div class="footer__header">
         <LogoBlack class="footer__logo" />
         <a href="tel:+74951203120" class="telephone">+7 495 120 3 120</a>
