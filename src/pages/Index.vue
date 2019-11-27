@@ -50,14 +50,7 @@ export default {
     };
   },
   mounted() {
-    this.load_yamap_obj(
-      "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=3A6d943a65558c35905c86a4cf36cb2c62c1897927b66ad5a15ada713aad7c1ec6"
-    ).then(() => {
-      window.ymaps.ready(this.init_map);
-    });
-    if (this.defaultService) {
-      this.selected_service = services[this.defaultService];
-    }
+    setTimeout(this.load_map, 2000);
   },
   watch: {
     myMap(value) {
@@ -111,7 +104,7 @@ export default {
         properties: {
           // Контент метки.
           iconCaption: "Финсервис 'Здесь Легко'",
-          balloonContent: 'Россия, Москва, Волгоградский проспект, 43к3'
+          balloonContent: "Россия, Москва, Волгоградский проспект, 43к3"
         }
       });
 
@@ -123,12 +116,21 @@ export default {
         // Свойства.
         properties: {
           iconCaption: "Финсервис 'Здесь Легко'",
-          balloonContent: 'Россия, Москва, МКАД; 71-й километр, с16А'
+          balloonContent: "Россия, Москва, МКАД; 71-й километр, с16А"
         }
       });
 
-
-      this.myMap.geoObjects.add(avilon).add(wayPark)
+      this.myMap.geoObjects.add(avilon).add(wayPark);
+    },
+    load_map() {
+      this.load_yamap_obj(
+        "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=3A6d943a65558c35905c86a4cf36cb2c62c1897927b66ad5a15ada713aad7c1ec6"
+      ).then(() => {
+        window.ymaps.ready(this.init_map);
+      });
+      if (this.defaultService) {
+        this.selected_service = services[this.defaultService];
+      }
     },
     toggleModal() {
       this.modalOpen = !this.modalOpen;
