@@ -1,7 +1,7 @@
 <template>
   <section class="section conditions">
     <div class="section__content">
-      <h3 class="heading-3">Условия займа под залог автомобиля</h3>
+      <h2 class="heading-3">Условия займа под залог автомобиля</h2>
       <div class="hashtags">
         <span class="hashtag">#деньгивыгодно</span>
         <span class="hashtag">#лучшее</span>

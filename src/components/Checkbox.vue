@@ -1,6 +1,6 @@
 <template>
   <label class="label label__agreement">
-    <div class="form__agreement">
+    <span class="form__agreement">
       <input v-model="checked" type="checkbox" class="form__checkbox" />
       <span>
         <span
@@ -14,7 +14,7 @@
           >персональных данных.</a>
         </span>
       </span>
-    </div>Подтверждение
+    </span>Подтверждение
   </label>
 </template>
 
