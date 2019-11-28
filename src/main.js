@@ -54,10 +54,10 @@ export default function(Vue, { router, head, appOptions }) {
     }
   })
 
-  head.link.push({
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800"
-  });
+  // head.link.push({
+  //   rel: "stylesheet",
+  //   href: "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800"
+  // });
 
   head.meta.push({
     name: "description",

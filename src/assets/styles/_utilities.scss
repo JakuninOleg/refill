@@ -92,12 +92,15 @@
 
     &--application {
 
+      @include respond(medium) {
+        grid-row: 2;
+      }
+
       @include respond(tab-port) {
         grid-column: 1 / -1;
       }
 
       grid-column: 1 / 2;
-      grid-row: 2;
     }
   }
 }
