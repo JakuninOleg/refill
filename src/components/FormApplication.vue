@@ -16,7 +16,7 @@
             class="form-application__step-text"
           >Отправьте заявку и получите предварительное одобрение по телефону</span>
         </div>
-        <Form :class="{'form--flex': submitted}">
+        <Form>
           <template v-slot:form-name>
             <label class="label">
               <input

@@ -9,7 +9,7 @@
           <span class="hashtag">#качество</span>
         </div>
       </header>
-      <Form :class="{'form--flex': submitted}" class="form--questions">
+      <Form class="form--questions">
         <template v-slot:form-btn>
           <Button class="btn btn--red no-padding">Заказать звонок</Button>
         </template>
