@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 import Button from "~/components/Button.vue";
 import InputPhone from "~/components/InputPhone.vue";
 
@@ -34,12 +36,20 @@ export default {
   computed: {
     submitted() {
       return this.$store.getters.submitted;
+    },
+    name() {
+      return this.$store.getters.name
+    },
+    phone() {
+      return this.$store.getters.phone
     }
   },
   methods: {
     submit() {
-      this.$store.dispatch("submitForm");
-      axios.post('http://localhost:3000/api/v1/requests/', {request: {name: 'test', phone: '12345', source: 'zaim-pts'}})
+      // this.$store.dispatch("submitForm");
+      axios.post('http://localhost:3000/api/v1/requests/', {request: {name: this.name, phone: this.phone, source: 'zaim-pts'}}).then(response => {
+        console.log(response)
+      })
     }
   }
 };

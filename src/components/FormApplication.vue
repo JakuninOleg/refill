@@ -18,7 +18,14 @@
         </div>
         <Form :class="{'form--flex': submitted}">
           <template v-slot:form-name>
-            <label class="label"><input type="text" class="form__name form__input" placeholder="Ваше имя" />Имя</label>
+            <label class="label">
+              <input
+                type="text"
+                class="form__name form__input"
+                placeholder="Ваше имя"
+                v-model="name"
+              />Имя
+            </label>
           </template>
           <template v-slot:form-btn>
             <Button class="btn btn--red form-application__button">Отправить заявку</Button>
@@ -31,9 +38,7 @@
           </template>
 
           <template v-slot:form-submitted-message>
-            <h4
-              class="heading-4"
-            >Спасибо за обращение! Менеджеры свяжутся с Вами в течение 5 минут</h4>
+            <h4 class="heading-4">Спасибо за обращение! Менеджеры свяжутся с Вами в течение 5 минут</h4>
           </template>
         </Form>
         <div class="form-application__step">
@@ -63,6 +68,14 @@ export default {
   computed: {
     submitted() {
       return this.$store.getters.submitted;
+    },
+    name: {
+      get: function () {
+        return this.$store.getters.name
+      },
+      set: function (value) {
+        this.$store.dispatch('setName', value)
+      }
     }
   }
 };

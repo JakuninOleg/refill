@@ -24,7 +24,7 @@ export default function(Vue, { router, head, appOptions }) {
         state.phone = payload;
       },
       'SET_NAME'(state, payload) {
-        state.phone = payload;
+        state.name = payload;
       },
       'SUBMIT_FORM'(state) {
         state.submitted = true
