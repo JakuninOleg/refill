@@ -24,6 +24,7 @@
                 class="form__name form__input"
                 placeholder="Ваше имя"
                 v-model="name"
+                required="true"
               />Имя
             </label>
           </template>

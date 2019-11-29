@@ -1,7 +1,7 @@
 <template>
   <label class="label label__agreement">
     <span class="form__agreement">
-      <input v-model="checked" type="checkbox" class="form__checkbox" />
+      <input v-model="checked" type="checkbox" class="form__checkbox" required="true" />
       <span>
         <span
           class="grey-dark checkbox-span"

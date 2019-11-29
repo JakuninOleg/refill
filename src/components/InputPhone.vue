@@ -7,6 +7,7 @@
     type="tel"
     class="form__phone form__input"
     placeholder="Ваш телефон"
+    required="true"
   >
 </template>
 
