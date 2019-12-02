@@ -95,30 +95,37 @@ export default {
         controls: []
       });
 
-      let avilon = new ymaps.GeoObject({
-        geometry: {
-          type: "Point",
-          coordinates: [55.713988, 37.71866]
+      let avilon = new ymaps.GeoObject(
+        {
+          geometry: {
+            type: "Point",
+            coordinates: [55.713988, 37.71866]
+          },
+          properties: {
+            iconCaption: "Финсервис 'Здесь Легко'",
+            balloonContent: "Россия, Москва, Волгоградский проспект, 43к3"
+          }
         },
-        // Свойства.
-        properties: {
-          // Контент метки.
-          iconCaption: "Финсервис 'Здесь Легко'",
-          balloonContent: "Россия, Москва, Волгоградский проспект, 43к3"
+        {
+          preset: "islands#redMoneyCircleIcon"
         }
-      });
+      );
 
-      let wayPark = new ymaps.GeoObject({
-        geometry: {
-          type: "Point",
-          coordinates: [55.857579, 37.394242]
+      let wayPark = new ymaps.GeoObject(
+        {
+          geometry: {
+            type: "Point",
+            coordinates: [55.857579, 37.394242],
+          },
+          properties: {
+            iconCaption: "Финсервис 'Здесь Легко'",
+            balloonContent: "Россия, Москва, МКАД; 71-й километр, с16А"
+          }
         },
-        // Свойства.
-        properties: {
-          iconCaption: "Финсервис 'Здесь Легко'",
-          balloonContent: "Россия, Москва, МКАД; 71-й километр, с16А"
+        {
+          preset: "islands#redMoneyCircleIcon"
         }
-      });
+      );
 
       this.myMap.geoObjects.add(avilon).add(wayPark);
     },
