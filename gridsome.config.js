@@ -18,7 +18,7 @@ function addStyleResource(rule) {
 module.exports = {
   siteName: "Здесь Легко",
   titleTemplate:
-    "Деньги под ПТС в Москве. 100 литров бензина бесплатно и 100% одобрение",
+    "Деньги под ПТС и 100 литров бензина в подарок – Здесь Легко",
   plugins: [
     {
       use: "gridsome-plugin-yandex-metrika",
