@@ -65,4 +65,11 @@ export default function(Vue, { router, head, appOptions }) {
     content:
       "Специально для всех, кто ищет лучшее предложение по быстрому финансированию. Деньги под ПТС. Авто остается у вас! 100 литров бензина в подарок. 100% одобрение. Без скрытых комиссий. Выдача за 30 минут. Заправляйся легко! +7 495 120 3 120"
   });
+
+  head.meta.push({
+    'http-equiv': "Cache-control",
+    key: "Cache-control",
+    content:
+      "max-age=31557600, must-revalidate"
+  });
 }
