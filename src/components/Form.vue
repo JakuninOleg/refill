@@ -44,14 +44,9 @@ export default {
     submit() {
       this.$store.dispatch("submitForm");
       this.submitted = true;
-      axios
-       
-        .post("https://landing-api.zdeslegko.ru/api/v1/requests/", {
-          request: { name: this.name, phone: this.phone, source: "zaim-pts" }
-        })
-        .then(response => {
-          console.log(response);
-        });
+      axios.post("https://landing-api.zdeslegko.ru/api/v1/requests/", {
+        request: { name: this.name, phone: this.phone, source: "zaim-pts" }
+      });
     }
   }
 };
