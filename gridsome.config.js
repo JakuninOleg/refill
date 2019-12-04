@@ -33,6 +33,12 @@ module.exports = {
           ecommerce: "dataLayer"
         }
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-127687486-4'
+      }
     }
   ],
   chainWebpack(config) {
