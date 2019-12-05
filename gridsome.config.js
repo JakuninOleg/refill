@@ -17,13 +17,22 @@ function addStyleResource(rule) {
 
 module.exports = {
   siteName: "Здесь Легко",
+  siteUrl: "https://zaim-pts.zdeslegko.ru/",
   titleTemplate: "Деньги под ПТС и 100 литров бензина в подарок – Здесь Легко",
   plugins: [
+    'gridsome-plugin-robots-txt',
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000,
+        exclude: ['/404']
+      }
+    },
     {
       use: "gridsome-plugin-yandex-metrika",
       env: "production",
       options: {
-        id: 56530444,
+        id: 56518120,
         options: {
           clickmap: true,
           trackLinks: true,
