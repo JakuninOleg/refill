@@ -27,11 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "857706cc9c53691ee16e0508672a026d"
+    "revision": "3ce3f78df15cc6a17a3fe1d3033fdc27"
   },
   {
     "url": "404/index.html",
-    "revision": "857706cc9c53691ee16e0508672a026d"
+    "revision": "3ce3f78df15cc6a17a3fe1d3033fdc27"
   },
   {
     "url": "assets/css/3.styles.7ee4951e.css",
@@ -39,27 +39,27 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/data/404/index.json",
-    "revision": "b08ef7709d7b2ad88540fb5580c37d14"
+    "revision": "4dc515d2d213f6869333e027d72a0457"
   },
   {
     "url": "assets/data/index.json",
-    "revision": "b08ef7709d7b2ad88540fb5580c37d14"
+    "revision": "4dc515d2d213f6869333e027d72a0457"
   },
   {
     "url": "assets/img/bg.362d25c9.jpg",
     "revision": "362d25c9f787405d4f15e13f3327a205"
   },
   {
-    "url": "assets/js/app.cee690f4.js",
-    "revision": "97a12f1d709df6de67ac14684bd4e4e8"
+    "url": "assets/js/app.4719a4fe.js",
+    "revision": "39a86ccc7b034a33050795df1f507777"
   },
   {
-    "url": "assets/js/page--node-modules--gridsome--app--pages--404-vue.96a4e55f.js",
+    "url": "assets/js/page--node-modules--gridsome--app--pages--404-vue.32fca0c3.js",
     "revision": "2d8a96c6e40cc65c4f12b5d86fb58535"
   },
   {
-    "url": "assets/js/page--src--pages--index-vue.3d3e8de0.js",
-    "revision": "e194d3b8b5d9f9af82c0adcf16468a17"
+    "url": "assets/js/page--src--pages--index-vue.8eae80e8.js",
+    "revision": "fb57d5a7bc3c75a0ee96d85d857cf465"
   },
   {
     "url": "assets/js/vendors~page--src--pages--index-vue.1250a73b.js",
@@ -119,7 +119,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "c1f724fa8321f1a23581fe8c178b029a"
+    "revision": "5ec30ad6e51df48c6895ce405e2fdf5a"
   },
   {
     "url": "logo.png",

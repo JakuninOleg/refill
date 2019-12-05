@@ -20,7 +20,17 @@ module.exports = {
   siteUrl: "https://zaim-pts.zdeslegko.ru/",
   titleTemplate: "Деньги под ПТС и 100 литров бензина в подарок – Здесь Легко",
   plugins: [
-    'gridsome-plugin-robots-txt',
+    {
+      use: 'gridsome-plugin-robots-txt',
+      options: {
+        policy: [
+          {
+            userAgent: "*",
+            allow: "*",
+          }
+        ]
+      }
+    },
     {
       use: '@gridsome/plugin-sitemap',
       options: {
