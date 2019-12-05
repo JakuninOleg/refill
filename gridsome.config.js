@@ -42,7 +42,7 @@ module.exports = {
       use: "gridsome-plugin-yandex-metrika",
       env: "production",
       options: {
-        id: 56518120,
+        id: 56530444,
         options: {
           clickmap: true,
           trackLinks: true,
