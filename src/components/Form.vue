@@ -41,16 +41,16 @@ export default {
     }
   },
   methods: {
-    submit() {
+    submit(e) {
+      let target;
+      e.target.id == 'form-modal' ? target = 'Обратный звонок' : target = 'Отправить заявку'
       this.$store.dispatch("submitForm");
       this.submitted = true;
-      // axios.post("https://landing-api.zdeslegko.ru/api/v1/requests/", {
-      //   request: { name: this.name, phone: this.phone, source: "zaim-pts" }
-      // });
-
-      axios.post("http://localhost:3000/api/v1/requests", {
+      axios.post("https://landing-api.zdeslegko.ru/api/v1/requests/", {
         request: { name: this.name, phone: this.phone, source: "zaim-pts" }
       });
+      console.log(this.$metrika.reachGoal(target, {name: this.name, phone: this.phone}))
+      // ym(56530444, 'reachGoal', target, {name: this.name, phone: this.phone})
     }
   }
 };

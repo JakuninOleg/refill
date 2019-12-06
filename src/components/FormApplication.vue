@@ -16,7 +16,7 @@
             class="form-application__step-text"
           >Отправьте заявку и получите предварительное одобрение по телефону</span>
         </div>
-        <Form>
+        <Form id="form-application">
           <template v-slot:form-name>
             <label class="label">
               <input

@@ -7,7 +7,7 @@
       </div>
 
       <div class="modal__body">
-        <Form class="form__modal">
+        <Form class="form__modal" id="form-modal">
           <template v-slot:form-header>
             <h4
               class="heading-4 text-center"
