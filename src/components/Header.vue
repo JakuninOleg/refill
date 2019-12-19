@@ -4,7 +4,7 @@
       <slot />
       <div class="header__content">
         <div class="header__content-top">
-          <span class="header__text--date">только до 28 декабря</span>
+          <span class="header__text--date">только до 31 декабря</span>
           <span class="header__text">для всех, кто хочет найти лучшее предложение</span>
         </div>
         <h1 class="header__heading">
